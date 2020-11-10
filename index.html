@@ -63,6 +63,14 @@
     }
 
     async function getFriendship() {
+      const friend = await liff.getFriendship()
+      document.getElementById("firnedship").append(friend.friendFlag);
+      if(!friend.friendFlag){
+        if(confirm("Are you wan na add friend ")){
+          wind.location = "http://www.googlw.com"
+        }
+      }
+
     }
 
     async function sendMsg() {
@@ -77,12 +85,12 @@
           {
             "type":"sticker",
             "stickerId":2,
-            "packageId":1
+            "packageId":2
           },
           {
             "type":"sticker",
             "stickerId":3,
-            "packageId":1
+            "packageId":3
           },
           {
             "type":"sticker",
@@ -138,7 +146,7 @@
       getEnvironment()
       getUserProfile()
       getContext()
-      /// getFriendship()
+      getFriendship()
       // createUniversalLink()
     }
     main()
