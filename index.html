@@ -57,10 +57,12 @@
     }
 
     async function scanCode() {
+      const result = await liff.scanCode()
+        document.getElementById("scanCode").append(result.value)
     }
 
     function openWindow() {
-      alert("openwindow");
+  
       liff.openWindow({
         url:"https://line.me",
         external:true
