@@ -58,6 +58,7 @@
     }
 
     async function scanCode() {
+     
       const result = await liff.scanCode()
         document.getElementById("scanCode").append(result.value)
     }
@@ -112,8 +113,6 @@
     }
 
     function getContext() {
-
-      liff.getc
       document.getElementById("type").append(liff.getContext().type);
       document.getElementById("viewType").append(liff.getContext().viewType);
       document.getElementById("utouId").append(liff.getContext().utouId);
@@ -156,13 +155,13 @@
       document.getElementById("isLoggedIn").append(liff.isLoggedIn())
 
       if(liff.isLoggedIn()){
-        getEnvironment()
-        getUserProfile()
-        getContext()
-        getFriendship()
-      }
-    
 
+      getEnvironment()
+      getUserProfile()
+      getContext()
+      getFriendship()
+      
+      }
       // createUniversalLink()
     }
     main()
