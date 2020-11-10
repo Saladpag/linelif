@@ -66,9 +66,22 @@
     }
 
     async function sendMsg() {
+      if(liff.getContext().type!=="none"){
+        await liff.sendMsg([
+          {
+            "type":"sticker",
+            "stickerId":1,
+            "packageId":1
+          }
+          
+        ])
+        alert("message sent")
+      }
     }
 
     function getContext() {
+
+      liff.getc
       document.getElementById("type").append(liff.getContext().type);
       document.getElementById("viewType").append(liff.getContext().viewType);
       document.getElementById("utouId").append(liff.getContext().utouId);
