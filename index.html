@@ -54,10 +54,10 @@
     }
 
     function closed() {
+      liff.closed()
     }
 
     async function scanCode() {
-      alert("scann")
       const result = await liff.scanCode()
         document.getElementById("scanCode").append(result.value)
     }
